@@ -1,93 +1,196 @@
-<h1 align="center"> Conversor de Divisas </h1>
+# Conversor de Divisas
 
-_Aplicación web para hacer conversión de monedas de diferentes paises._ 🚀
+_Aplicación web para hacer conversión de monedas de diferentes países._ 🚀
 
-##**Stack tecnológico** 🛠️
-**Backend:** 
-```
-Lenguaje: JavaScript con Node.js (fácil de aprender y usar).
-Framework: Express.js (ligero y flexible para crear APIs REST).
-Base de datos: PostgreSQL (relacional, robusta y gratuita).
-```
-* [Node.js](https://nodejs.org/en)
-* [Express.js](https://expressjs.com)
-* [PostgreSQL](https://www.postgresql.org)
+## Stack Tecnológico 🛠️
 
-## **Frontend:** 
-```
-**Framework:** React.js (popular, basado en componentes y usa JavaScript).
-```
-* [React.js](https://react.dev)
+### Backend
+- **Lenguaje:** JavaScript con Node.js (fácil de aprender y usar).
+- **Framework:** Express.js (ligero y flexible para crear APIs REST).
+- **Base de datos:** PostgreSQL (relacional, robusta y gratuita).
 
-##**Control de versiones:**
-* [Git/GitHub](https://git-scm.com)
-  
-##**Herramientas adicionales:**
-```
-Editor: Visual Studio Code (gratis y con muchas extensiones).
-Cliente HTTP: Postman (para probar el API).
-```
-## Instrucciones de instalación 📋
+Recursos:
+- [Node.js](https://nodejs.org/en)
+- [Express.js](https://expressjs.com)
+- [PostgreSQL](https://www.postgresql.org)
 
-##**Configuración del entorno**
-**Instalar herramientas**
-```
-1) Descargar Visual Studio Code: Descargarlo desde :
-```
-* [Visual Studio Code](https://code.visualstudio.com) e instalarlo.
-```
-2) Node.js y npm:** Descargar Node.js desde :
-```
-* [Node.js](https://nodejs.org/en). 
-```
-```
-Instalar y verifica en la terminal con: node -v ó npm -v
+### Frontend
+- **Framework:** React.js (popular, basado en componentes y usa JavaScript).
 
-**Git:**
-```
-1) Descárgalo desde 
-```
-* [gIT](https://git-scm.com) e instálalo.
-```
-2) Verifica con: git --version
-```
-**PostgreSQL:**
-Descárgalo desde * [PostgreSQL](https://www.postgresql.org) e instalarlo.
-Durante la instalación, se debe configurar una contraseña para el usuario postgres.
-### Clona el repositorio: 🔧
-```
-git clone https://github.com/tu-usuario/currency-converter.git
-npm install
-npm start
-```
+Recursos:
+- [React.js](https://react.dev)
 
-**FrontEnd**
-### 1. Clona el repositorio: 🔧
-Copia la URL del repositorio https://github.com/jdbarajass/conversion_divisas.git
-En la terminal, en una carpeta vacía, ejecuta:
-En bash
-```
+### Control de Versiones
+- [Git/GitHub](https://git-scm.com)
+
+### Herramientas Adicionales
+- **Editor:** Visual Studio Code (gratis y con muchas extensiones).
+- **Cliente HTTP:** Postman (para probar el API).
+
+---
+
+## Instrucciones de Instalación y Configuración 📋
+
+### 1. Configuración del Entorno
+
+**Instalar Herramientas**
+
+1. **Visual Studio Code:** Descárgalo e instálalo desde [Visual Studio Code](https://code.visualstudio.com).
+2. **Node.js y npm:** Descarga e instala Node.js desde [Node.js](https://nodejs.org/en). Verifica la instalación ejecutando:
+   ```bash
+   node -v
+   npm -v
+   ```
+3. **Git:** Descárgalo e instálalo desde [Git](https://git-scm.com) y verifica la instalación:
+   ```bash
+   git --version
+   ```
+4. **PostgreSQL:** Descárgalo e instálalo desde [PostgreSQL](https://www.postgresql.org). Durante la instalación, configura una contraseña para el usuario `postgres`.
+
+### 2. Clonar el Repositorio
+
+Clona el repositorio principal y accede a la carpeta del proyecto:
+```bash
 git clone https://github.com/jdbarajass/conversion_divisas.git
-npm install
-npm start
+cd conversion_divisas
 ```
-**BackEnd**
-## Instrucciones de instalación
-```
+
+### 3. Configuración del Backend
+
+#### 3.1 Instalar Dependencias del Backend
+
+Accede a la carpeta `backend` e instala las dependencias necesarias:
+```bash
 cd backend
 npm install
+```
+
+#### 3.2 Configurar la Base de Datos
+
+1. Abre PostgreSQL (puedes usar pgAdmin o la terminal).
+2. Crea la base de datos `currency_converter`:
+   ```sql
+   CREATE DATABASE currency_converter;
+   ```
+3. Conéctate a la base de datos:
+   ```sql
+   \c currency_converter
+   ```
+4. Crea la tabla `exchange_rates`:
+   ```sql
+   CREATE TABLE exchange_rates (
+       id SERIAL PRIMARY KEY,
+       from_currency VARCHAR(3) NOT NULL,
+       to_currency VARCHAR(3) NOT NULL,
+       rate DECIMAL(10, 4) NOT NULL,
+       last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+   ```
+5. Inserta datos de ejemplo:
+   ```sql
+   INSERT INTO exchange_rates (from_currency, to_currency, rate) VALUES
+   ('USD', 'EUR', 0.85),
+   ('EUR', 'USD', 1.18),
+   ('USD', 'COP', 4200.00),
+   ('COP', 'USD', 0.00024);
+   ```
+
+#### 3.3 Configurar la Conexión a la Base de Datos
+
+En el archivo `backend/index.js`, configura la conexión a PostgreSQL actualizando la contraseña según corresponda:
+```javascript
+const { Pool } = require('pg');
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'currency_converter',
+    password: 'tu-contraseña',  // Cambia esto por tu contraseña de PostgreSQL
+    port: 5432,
+});
+```
+
+#### 3.4 Ejecutar el Backend
+
+Inicia el servidor del backend:
+```bash
 node index.js
 ```
-##**Base de Datos**
-Configura PostgreSQL con la base de datos currency_converter y la tabla exchange_rates.
-Modelo de datos
-Tabla exchange_rates:
+El servidor se ejecutará en [http://localhost:5000](http://localhost:5000).
 
-id: SERIAL PRIMARY KEY
-from_currency: VARCHAR(3)
-to_currency: VARCHAR(3)
-rate: DECIMAL(10,4)
-last_updated: TIMESTAMP
+### 4. Configuración del Frontend
 
+#### 4.1 Instalar Dependencias del Frontend
 
+Desde la raíz del proyecto, accede a la carpeta `frontend` e instala las dependencias:
+```bash
+cd ../frontend
+npm install
+```
 
+#### 4.2 Ejecutar el Frontend
+
+Inicia la aplicación frontend:
+```bash
+npm start
+```
+La aplicación se abrirá automáticamente en [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Uso de la Aplicación
+
+1. **Seleccionar Monedas:** Elige la moneda de origen y la moneda de destino desde los menús desplegables.
+2. **Ingresar Monto:** Escribe el monto que deseas convertir.
+3. **Convertir:** Haz clic en el botón "Convertir" para ver el resultado.
+
+### Probar el API con Postman (Opcional)
+
+- **Obtener tasas de cambio:**
+  ```http
+  GET http://localhost:5000/rates
+  ```
+- **Convertir un monto:**
+  Envía una solicitud POST a:
+  ```http
+  POST http://localhost:5000/convert
+  ```
+  Con el siguiente cuerpo JSON:
+  ```json
+  {
+      "from": "USD",
+      "to": "EUR",
+      "amount": 100
+  }
+  ```
+
+---
+
+## Estructura del Proyecto
+
+```
+conversion_divisas/
+├── backend/        # Código del servidor Node.js con Express.js y conexión a PostgreSQL.
+└── frontend/       # Aplicación React.js para la interfaz de usuario.
+```
+
+### Modelo de Datos
+
+La base de datos utiliza una tabla llamada `exchange_rates` con la siguiente estructura:
+- **id:** SERIAL PRIMARY KEY (identificador único autoincremental)
+- **from_currency:** VARCHAR(3) NOT NULL (moneda de origen, ej. 'USD')
+- **to_currency:** VARCHAR(3) NOT NULL (moneda de destino, ej. 'EUR')
+- **rate:** DECIMAL(10,4) NOT NULL (tasa de cambio, ej. 0.85)
+- **last_updated:** TIMESTAMP DEFAULT CURRENT_TIMESTAMP (fecha de última actualización)
+
+---
+
+## Notas Adicionales
+
+- Asegúrate de que el backend esté corriendo antes de iniciar el frontend, ya que este depende del API.
+- Si hay problemas con la conexión a la base de datos, revisa la configuración en `backend/index.js` (usuario, contraseña, puerto, etc.).
+- Para agregar más monedas o tasas de cambio, inserta nuevos registros en la tabla `exchange_rates` usando SQL.
+
+---
+
+¡Gracias por usar el Conversor de Divisas!  
+Si tienes preguntas o sugerencias, no dudes en abrir un issue en el repositorio o contactarme.
