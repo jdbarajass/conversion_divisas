@@ -32,12 +32,23 @@ Cliente HTTP: Postman (para probar el API).
 ##**Configuración del entorno**
 **Instalar herramientas**
 ```
-1) Descargar Visual Studio Code: Descargarlo desde * [Visual Studio Code](https://code.visualstudio.com) e instalarlo.
-2) Node.js y npm:** Descargar Node.js desde * [Node.js](https://nodejs.org/en). Instalar y verifica en la terminal con: node -v ó npm -v
+1) Descargar Visual Studio Code: Descargarlo desde :
 ```
+* [Visual Studio Code](https://code.visualstudio.com) e instalarlo.
+```
+2) Node.js y npm:** Descargar Node.js desde :
+```
+* [Node.js](https://nodejs.org/en). 
+```
+```
+Instalar y verifica en la terminal con: node -v ó npm -v
+
 **Git:**
 ```
-1) Descárgalo desde git-scm.com e instálalo.
+1) Descárgalo desde 
+```
+* [gIT](https://git-scm.com) e instálalo.
+```
 2) Verifica con: git --version
 ```
 **PostgreSQL:**
