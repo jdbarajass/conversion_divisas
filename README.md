@@ -5,17 +5,17 @@ _Aplicación web para hacer conversión de monedas de diferentes paises._ 🚀
 ##**Stack tecnológico** 🛠️
 **Backend:** 
 ```
-**Lenguaje:** JavaScript con Node.js (fácil de aprender y usar).
-**Framework:** Express.js (ligero y flexible para crear APIs REST).
-**Base de datos:** PostgreSQL (relacional, robusta y gratuita).
+Lenguaje: JavaScript con Node.js (fácil de aprender y usar).
+Framework: Express.js (ligero y flexible para crear APIs REST).
+Base de datos: PostgreSQL (relacional, robusta y gratuita).
 ```
 * [Node.js](https://nodejs.org/en)
 * [Express.js](https://expressjs.com)
 * [PostgreSQL](https://www.postgresql.org)
 
-##**Frontend:** 
+## **Frontend:** 
 ```
-* **Framework:** React.js (popular, basado en componentes y usa JavaScript).
+**Framework:** React.js (popular, basado en componentes y usa JavaScript).
 ```
 * [React.js](https://react.dev)
 
@@ -24,16 +24,16 @@ _Aplicación web para hacer conversión de monedas de diferentes paises._ 🚀
   
 ##**Herramientas adicionales:**
 ```
-**Editor**: Visual Studio Code (gratis y con muchas extensiones).
-**Cliente HTTP:** Postman (para probar el API).
+Editor: Visual Studio Code (gratis y con muchas extensiones).
+Cliente HTTP: Postman (para probar el API).
 ```
 ## Instrucciones de instalación 📋
 
 ##**Configuración del entorno**
 **Instalar herramientas**
 ```
-1) **Descargar Visual Studio Code:** Descargarlo desde [Visual Studio Code](https://code.visualstudio.com) e instalarlo.
-2) **Node.js y npm:** Descargar Node.js desde [Node.js](https://nodejs.org/en). Instalar y verifica en la terminal con: node -v ó npm -v
+1) Descargar Visual Studio Code: Descargarlo desde * [Visual Studio Code](https://code.visualstudio.com) e instalarlo.
+2) Node.js y npm:** Descargar Node.js desde * [Node.js](https://nodejs.org/en). Instalar y verifica en la terminal con: node -v ó npm -v
 ```
 **Git:**
 ```
