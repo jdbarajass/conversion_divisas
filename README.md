@@ -164,3 +164,6 @@ La aplicación se abrirá automáticamente en [http://localhost:3000](http://loc
   ```
 
 ---
+#### 5 Imagen del funcionamiento del proyecto
+![image](https://github.com/user-attachments/assets/9bfd37ef-50aa-4f12-a16a-7ef4940fb85e)
+
