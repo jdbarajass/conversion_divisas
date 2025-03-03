@@ -5,9 +5,9 @@ _Aplicación web para hacer conversión de monedas de diferentes paises._ 🚀
 ##**Stack tecnológico** 🛠️
 **Backend:** 
 ```
-* **Lenguaje:** JavaScript con Node.js (fácil de aprender y usar).
-* **Framework:** Express.js (ligero y flexible para crear APIs REST).
-* **Base de datos:** PostgreSQL (relacional, robusta y gratuita).
+**Lenguaje:** JavaScript con Node.js (fácil de aprender y usar).
+**Framework:** Express.js (ligero y flexible para crear APIs REST).
+**Base de datos:** PostgreSQL (relacional, robusta y gratuita).
 ```
 * [Node.js](https://nodejs.org/en)
 * [Express.js](https://expressjs.com)
@@ -16,12 +16,14 @@ _Aplicación web para hacer conversión de monedas de diferentes paises._ 🚀
 ##**Frontend:** 
 ```
 * **Framework:** React.js (popular, basado en componentes y usa JavaScript).
+```
 * [React.js](https://react.dev)
 
 ##**Control de versiones:**
 * [Git/GitHub](https://git-scm.com)
   
 ##**Herramientas adicionales:**
+```
 **Editor**: Visual Studio Code (gratis y con muchas extensiones).
 **Cliente HTTP:** Postman (para probar el API).
 ```
@@ -39,7 +41,7 @@ _Aplicación web para hacer conversión de monedas de diferentes paises._ 🚀
 2) Verifica con: git --version
 ```
 **PostgreSQL:**
-Descárgalo desde [PostgreSQL](https://www.postgresql.org) e instalarlo.
+Descárgalo desde * [PostgreSQL](https://www.postgresql.org) e instalarlo.
 Durante la instalación, se debe configurar una contraseña para el usuario postgres.
 ### Clona el repositorio: 🔧
 ```
