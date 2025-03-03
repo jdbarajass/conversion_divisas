@@ -1,6 +1,10 @@
 # Conversor de Divisas
 
 _Aplicación web para hacer conversión de monedas de diferentes países._ 🚀
+_Aplicación con FrontEnd y BackEnd juntos._ 
+
+_**Nota**._ 
+_En el BackEnd no se ponen variables de entorno porque no hay datos que proteger en el momento y es para una ejecución más rápida en caso de ser clonado el repositorio._ 
 
 ## Stack Tecnológico 🛠️
 
